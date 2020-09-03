@@ -1,0 +1,57 @@
+@mixin bg-image($url) {
+  background-image: url("../images/#{$url}");
+}
+
+// 方形盒子
+@mixin squareBox($side) {
+  height: $side;
+  width: $side;
+}
+
+// 圆形盒子
+@mixin circleBox($dia, $radius: $dia) {
+  @include squareBox($dia);
+
+  border-radius: $radius;
+}
+
+/**
+  * 内阴影和外阴影
+  */
+@mixin box-emboss($opacity, $opacity2){
+  box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+// 绝对定位
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+
+/**
+* Retina 背景图片
+* 
+* .bg-image {
+*      @include imgRetina(images/waterlily, jpg, 200px, 200px, no-repeat, center);
+*      height: 200px;
+*      width: 200px;
+*  }
+*/
+@mixin imgRetina($image, $extension, $width, $height, $position: center, $repeat: no-repeat) {
+  background: url('../images/' + $image + '.' + $extension) $repeat $position;
+
+  @media 
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (   min--moz-device-pixel-ratio: 2),
+  screen and (   -moz-min-device-pixel-ratio: 2),
+  screen and (     -o-min-device-pixel-ratio: 2/1),
+  screen and (        min-device-pixel-ratio: 2),
+  screen and (             min-resolution: 192dpi), 
+  screen and (             min-resolution: 2dppx) {    
+     background: url('../images/' + $image + '@2x' + '.' + $extension) $repeat $position;
+     background-size: $width $height;
+  }
+}

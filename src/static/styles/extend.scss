@@ -1,0 +1,22 @@
+@import './mixins.scss';
+
+.bg-full{
+  background-size: 100% 100%;
+}
+
+.bg-no-repeat{
+ background-repeat: no-repeat;
+}
+
+.abs-center{
+  @include abs-pos(50%, auto, auto, 50%);
+  transform: translate(-50%, -50%);
+}
+
+.text-ellipsis {
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

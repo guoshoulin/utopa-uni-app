@@ -1,0 +1,59 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "pages/mine/mine",
+      "style": {
+        "navigationBarTitleText": "mine"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pagesComponent",
+      "pages": [
+        {
+          "path": "navigation/navigation",
+          "style": {
+            "navigationBarTitleText": "组件"
+          }
+        },
+        {
+          "path": "button/button"
+        },
+        {
+          "path": "image/image"
+        },
+        {
+          "path": "inputNumber/inputNumber"
+        },
+        {
+          "path": "tag/tag"
+        },
+		{
+		  "path": "iconName/iconName"
+		},
+		{
+		  "path": "payStatus/payStatus"
+		},
+		{
+		  "path": "skuBounced/skuBounced"
+		},
+		{
+		  "path": "coupons/coupons"
+		}
+      ]
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}

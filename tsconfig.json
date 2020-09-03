@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "types": [
+      "uni-app",
+      "html5plus",
+      "miniprogram-api-typings/types/lib.wx.api.d.ts",
+      "mini-types/types/api"
+    ]
+  },
+  "baseUrl": ".",
+  "paths": {
+    "@vant/weapp/*": ["./node_modules/@vant/weapp/dist/*"]
+  }
+}
